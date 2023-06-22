@@ -9,8 +9,7 @@ on:
     
 jobs:
   build:
-    if: github.event.label.name == 'Dev'
-    runs-on:  self-hosted,
+    runs-on:  ip-172-31-18-3,
     name: Dev
     steps:
       - uses: actions/checkout@v3
