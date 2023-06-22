@@ -5,7 +5,7 @@ name: CICD Pipeline For Wiki Digitali
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ uat ]
     
 jobs:
   build:
