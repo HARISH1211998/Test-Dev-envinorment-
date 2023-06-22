@@ -9,7 +9,9 @@ on:
     
 jobs:
   build:
-    runs-on:  self-hosted
+    if: github.event.label.name == 'Dev'
+    runs-on:  self-hosted,
+    name: Dev
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
