@@ -14,7 +14,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
+      - run: sudo su - root    
       - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && sudo npm install --legacy-peer-deps
       - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && sudo pm2 restart all
         env:
