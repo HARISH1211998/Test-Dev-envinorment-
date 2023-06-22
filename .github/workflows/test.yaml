@@ -9,6 +9,7 @@ on:
     
 jobs:
   build:
+    if: startsWith(github.ref, 'refs/heads/develop')
     runs-on: Test
     steps:
       - uses: actions/checkout@v3
