@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && npm install --legacy-peer-deps
-      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && pm2 restart all
+      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && sudo npm install --legacy-peer-deps
+      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && sudo pm2 restart all
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
