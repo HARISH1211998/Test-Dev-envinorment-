@@ -26,4 +26,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: sudo pm2 kill && pm2 start
+    - run: sudo pm2 start
