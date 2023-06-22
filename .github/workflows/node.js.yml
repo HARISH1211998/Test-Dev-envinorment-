@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 18
       - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && npm install
-      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && pm2 stop 0
-      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && pm2 start npm -- start
+      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && sudo pm2 stop 0
+      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && sudo pm2 start npm -- start
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
