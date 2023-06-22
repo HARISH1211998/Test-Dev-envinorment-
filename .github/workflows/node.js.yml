@@ -15,9 +15,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install --legacy-peer-deps
-      - run: npm run build
-      - run: cd /home/ubuntu/actions-runner/_work/digitali_ui/digitali_ui && pm2 stop 0
-      - run: cd /home/ubuntu/actions-runner/_work/digitali_ui/digitali_ui && pm2 start npm -- start
+      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && npm install --legacy-peer-deps
+      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && npm run build
+      - run: cd /home/ubuntu/actions-runner/_work/Test-Dev-envinorment-/Test-Dev-envinorment-/my-app && npm start 
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
