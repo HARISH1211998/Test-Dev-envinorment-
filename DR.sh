@@ -1,4 +1,5 @@
 #!/bin/bash
+#Written By Harishankar
 
 # Generate a random suffix for the DB instance identifier
 random_suffix=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 6 | head -n 1)
